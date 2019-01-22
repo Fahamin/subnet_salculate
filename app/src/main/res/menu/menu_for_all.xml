@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+    <item
+        android:orderInCategory="2"
+        android:title="Reset"
+        app:showAsAction="always"
+        android:onClick="elear"/>
+    <item
+        android:id="@+id/menu_share_app1"
+        android:orderInCategory="2"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:title="Share This App"
+        app:showAsAction="always"
+        android:onClick="shareApp"/>
+    <item
+        android:id="@+id/my_ip"
+        android:orderInCategory="1"
+        android:title="My Ip address"
+        app:showAsAction="never"
+        android:onClick="getip"/>
+    <item
+        android:id="@+id/menu_rate_app"
+        android:orderInCategory="1"
+        android:title="Rate This App"
+        app:showAsAction="never"
+        android:onClick="rateApp"/>
+
+    <item
+        android:id="@+id/menu_share_app"
+        android:orderInCategory="2"
+        android:title="Share This App"
+        app:showAsAction="never"
+        android:onClick="shareApp"/>
+
+
+    <item
+        android:id="@+id/menu_more_app"
+        android:orderInCategory="3"
+        android:title="More Apps"
+        app:showAsAction="never"
+        android:onClick="moreApps"/>
+    <item
+        android:orderInCategory="3"
+        android:title="Exit"
+        app:showAsAction="never"
+        android:onClick="exit"/>
+</menu>

@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_design"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_design"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/edit_text_design"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorAccent"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Your Mac Address " />
+
+                        <TextView
+                            android:id="@+id/device_mac"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="2.5"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="#000" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_design"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorAccent"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Your Ip Address " />
+
+                        <TextView
+                            android:id="@+id/device_ip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="2.5"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="#000" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="1dp"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorAccent"
+                                android:padding="6dp"
+                                android:text="Enter IPv4 network address"
+                                android:textColor="#ffffff"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/first_octate_ET"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="."
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/second_octate_ET"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="."
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/third_octate_ET"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="."
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/fourth_octate_ET"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:maxLines="1" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="/"
+                                android:textSize="32sp" />
+
+
+                            <EditText
+                                android:id="@+id/cidr_value_ET"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/cidr_value"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:maxLines="1"
+                                android:textColorHint="#ccc" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/oval"
+                                android:onClick="decimal"
+                                android:text="Deccimal"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/oval"
+                                android:onClick="Binary"
+                                android:text="Binary"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffff"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/invalid_message_TV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="#f60000" />
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.gms.ads.AdView
+
+                        xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/adView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="@string/banner_home_footer_2">
+                    </com.google.android.gms.ads.AdView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/binarycard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingBottom="5dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/binanylin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorAccent"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:text="Binary Notation Result"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Subnet Mask" />
+
+                                    <TextView
+                                        android:id="@+id/binary_subnet_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Network" />
+
+                                    <TextView
+                                        android:id="@+id/binary_network_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Star host" />
+
+                                    <TextView
+                                        android:id="@+id/binary_first_host_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="End host" />
+
+                                    <TextView
+                                        android:id="@+id/binary_last_host_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Broadcast" />
+
+                                    <TextView
+                                        android:id="@+id/binary_broadcast_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:paddingBottom="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/decimallayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorAccent"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:text="Decimal Notation Result"
+                                android:textColor="#ffffff"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Subnet Mask" />
+
+                                    <TextView
+                                        android:id="@+id/decimal_subnet_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Network" />
+
+                                    <TextView
+                                        android:id="@+id/decimal_network_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Star host" />
+
+                                    <TextView
+                                        android:id="@+id/decimal_first_host_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="End host" />
+
+                                    <TextView
+                                        android:id="@+id/decimal_last_host_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_design"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="1"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Broadcast" />
+
+                                    <TextView
+                                        android:id="@+id/decimal_broadcast_TV"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0.5dp"
+                                        android:layout_weight="2.5"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:textColor="#000" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
