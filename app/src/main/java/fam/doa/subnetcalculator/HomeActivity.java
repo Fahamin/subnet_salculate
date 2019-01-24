@@ -1205,6 +1205,7 @@ public class HomeActivity extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+        finish();
 
     /*int pid = android.os.Process.myPid();=====> use this if you want to kill your activity. But its not a good one to do.
     android.os.Process.killProcess(pid);*/
@@ -1234,13 +1235,13 @@ public class HomeActivity extends AppCompatActivity {
 
 
         Intent intent;
-        intent = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Cave+of+app"));
         startActivity(intent);
 
     }
 
     public void rateApps() {
-        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(""));
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=fam.doa.subnetcalculator"));
         startActivity(i);
     }
 
@@ -1305,7 +1306,9 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void exit(MenuItem item) {
+
         System.exit(1);
+        finish();
     }
 
     public void elear(MenuItem item) {
