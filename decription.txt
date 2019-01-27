@@ -1,0 +1,4 @@
+An easy to use, simple subnet calculator that takes the hassle 
+out of the many intricacies involved with the ipv4 subnet system. 
+This tool will allow you to accurately subnet different class networks 
+as well as calculate the number of hosts allowed. 
