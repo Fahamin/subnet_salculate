@@ -2,8 +2,6 @@ package fam.doa.subnetcalculator;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.WindowManager;
 
 import com.daimajia.androidanimations.library.Techniques;
@@ -11,7 +9,7 @@ import com.viksaa.sssplash.lib.activity.AwesomeSplash;
 import com.viksaa.sssplash.lib.cnst.Flags;
 import com.viksaa.sssplash.lib.model.ConfigSplash;
 
-public class MainActivity  extends AwesomeSplash {
+public class MainActivity extends AwesomeSplash {
 
     @Override
     public void initSplash(ConfigSplash configSplash) {
@@ -60,6 +58,7 @@ public class MainActivity  extends AwesomeSplash {
     public void animationsFinished() {
         final Intent intent = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(intent);
+        finish();
     }
 }
 
