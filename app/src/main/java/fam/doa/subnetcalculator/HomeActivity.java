@@ -287,7 +287,7 @@ public class HomeActivity extends AppCompatActivity {
             Toast.makeText(this, "Please enter a valid IP", Toast.LENGTH_SHORT).show();
 
             invalid_message.setVisibility(View.VISIBLE);
-            invalid_message.setText("Invalid IP. Every octate must be required");
+            invalid_message.setText("Check IP. Every octate must be required");
 
             decimal_network.setText("");
             decimal_subnet_mask.setText("");
@@ -319,10 +319,10 @@ public class HomeActivity extends AppCompatActivity {
 
                 if (first_octate_value > 255 || second_octate_value > 255 || third_octate_value > 255 || fourth_octate_value > 255) {
 
-                    Toast.makeText(this, "Invalid IP Every octate must be between 0-255", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Check IP Every octate must be between 0-255", Toast.LENGTH_LONG).show();
 
                     invalid_message.setVisibility(View.VISIBLE);
-                    invalid_message.setText("Invalid IP. Every octate must be between 0-255");
+                    invalid_message.setText("Check IP. Every octate must be between 0-255");
 
                     decimal_network.setText("");
                     decimal_subnet_mask.setText("");
@@ -542,10 +542,10 @@ public class HomeActivity extends AppCompatActivity {
 
                 if (first_octate_value > 255 || second_octate_value > 255 || third_octate_value > 255 || fourth_octate_value > 255) {
 
-                    Toast.makeText(this, "Invalid IP. Every octate must be between 0-255", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Check IP. Every octate must be between 0-255", Toast.LENGTH_SHORT).show();
 
                     invalid_message.setVisibility(View.VISIBLE);
-                    invalid_message.setText("Invalid IP. Every octate must be between 0-255");
+                    invalid_message.setText("Check IP. Every octate must be between 0-255");
 
                     decimal_network.setText("");
                     decimal_subnet_mask.setText("");
@@ -566,10 +566,10 @@ public class HomeActivity extends AppCompatActivity {
 
                     if (cidr_value_integer > 32) {
 
-                        Toast.makeText(this, "Invalid CIDR value. It must be between 0-32", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Check CIDR value. It must be between 0-32", Toast.LENGTH_SHORT).show();
 
                         invalid_message.setVisibility(View.VISIBLE);
-                        invalid_message.setText("Invalid CIDR value. It must be between 0-32");
+                        invalid_message.setText("Check CIDR value. It must be between 0-32");
 
                         decimal_network.setText("");
                         decimal_subnet_mask.setText("");
@@ -1207,9 +1207,6 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
 
-    /*int pid = android.os.Process.myPid();=====> use this if you want to kill your activity. But its not a good one to do.
-    android.os.Process.killProcess(pid);*/
-
     }
 
     public void rateApp(MenuItem item) {
@@ -1235,7 +1232,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
         Intent intent;
-        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Cave+of+app"));
+        intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/dev?id=7556100466882241730"));
         startActivity(intent);
 
     }

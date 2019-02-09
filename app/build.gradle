@@ -6,13 +6,13 @@ android {
         applicationId "fam.doa.subnetcalculator"
         minSdkVersion 18
         targetSdkVersion 28
-        versionCode 4
-        versionName "4.3.2"
+        versionCode 5
+        versionName "4.2.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
