@@ -6,8 +6,8 @@ android {
         applicationId "fam.doa.subnetcalculator"
         minSdkVersion 18
         targetSdkVersion 28
-        versionCode 5
-        versionName "4.2.3"
+        versionCode 6
+        versionName "5.3.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

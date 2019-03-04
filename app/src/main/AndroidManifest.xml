@@ -31,7 +31,6 @@
         </activity>
         <activity android:name=".HomeActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".WebviewActivity"></activity>
     </application>
 
 </manifest>
