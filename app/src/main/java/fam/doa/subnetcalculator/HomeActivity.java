@@ -267,7 +267,7 @@ public class HomeActivity extends AppCompatActivity {
 
     public void calculate() {
         count++;
-        if (count % 3 == 0) {
+        if (count % 2 == 0) {
             mInterstitialAd = new InterstitialAd(this);
             mInterstitialAd.setAdUnitId(getString(R.string.interstitial_full_screen2));
             AdRequest adRequest = new AdRequest.Builder().build();
@@ -1253,7 +1253,7 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Please click BACK again for exit", Toast.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
 

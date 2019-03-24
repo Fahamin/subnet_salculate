@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Subnet Calculator</string>
 
-    <string name="cidr_value"><font size="20">CIDR</font></string>
+    <string name="cidr_value"><font size="22">CIDR</font></string>
 
 
     <string name="appID">ca-app-pub-4726525166301004~5073653508</string>
