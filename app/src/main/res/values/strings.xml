@@ -4,13 +4,17 @@
     <string name="cidr_value"><font size="22">CIDR</font></string>
 
 
-    <string name="appID">ca-app-pub-4726525166301004~5073653508</string>
-    <string name="interstitial_full_screen2">ca-app-pub-4726525166301004/9859253932</string>
-    <string name="banner_home_footer_2">ca-app-pub-4726525166301004/2591138007</string>
+    <!-- <string name="appID">ca-app-pub-4726525166301004~5073653508</string>
+     <string name="interstitial_full_screen2">ca-app-pub-4726525166301004/9859253932</string>
+     <string name="banner_home_footer_2">ca-app-pub-4726525166301004/2591138007</string>
 
 
-   <!-- <string name="appID">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="interstitial_full_screen2">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="banner_home_footer_2">ca-app-pub-3940256099942544/6300978111</string>
--->
+    &lt;!&ndash; <string name="appID">ca-app-pub-3940256099942544~3347511713</string>
+     <string name="interstitial_full_screen2">ca-app-pub-3940256099942544/1033173712</string>
+     <string name="banner_home_footer_2">ca-app-pub-3940256099942544/6300978111</string>
+ &ndash;&gt;-->
+
+    <string name="facebook_banner">429030130993372_429032230993162</string>
+    <string name="facebook_interstial">429030130993372_429032944326424</string>
+
 </resources>

@@ -28,10 +28,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
+
+import com.facebook.ads.AbstractAdListener;
+import com.facebook.ads.Ad;
+import com.facebook.ads.AdError;
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
+import com.facebook.ads.InterstitialAd;
+import com.facebook.ads.InterstitialAdActivity;
+import com.facebook.ads.InterstitialAdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 
 import java.io.File;
@@ -42,11 +48,11 @@ import java.util.Enumeration;
 
 public class HomeActivity extends AppCompatActivity {
 
+    private final String TAG = InterstitialAdActivity.class.getSimpleName();
+
     boolean doubleBackToExitPressedOnce = false;
 
-    InterstitialAd mInterstitialAd;
-    AdView mAdView;
-    AdRequest adRequest;
+
     int count = 0;
 
     LinearLayout dl, bl;
@@ -104,6 +110,8 @@ public class HomeActivity extends AppCompatActivity {
     int decimal_first_part, decimal_second_part, decimal_third_part, decimal_fourth_part;
 
     int m, h, b;
+    private AdView adView;
+    private InterstitialAd interstitial;
 
 
     @Override
@@ -247,11 +255,10 @@ public class HomeActivity extends AppCompatActivity {
         String macadress = mac.getMacAddress();
         device_mac.setText(macadress);
 
-        MobileAds.initialize(getApplicationContext(), getString(R.string.appID));
-
-        mAdView = (AdView) findViewById(R.id.adView1);
-        adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        adView = new AdView(this, getString(R.string.facebook_banner), AdSize.BANNER_HEIGHT_50);
+        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+        adContainer.addView(adView);
+        adView.loadAd();
 
 
         bl.setVisibility(View.GONE);
@@ -259,8 +266,9 @@ public class HomeActivity extends AppCompatActivity {
 
 
     private void showInterstitial() {
-        if (mInterstitialAd.isLoaded()) {
-            mInterstitialAd.show();
+        if(interstitial.isAdLoaded())
+        {
+            interstitial.show();
         }
     }
 
@@ -268,16 +276,39 @@ public class HomeActivity extends AppCompatActivity {
     public void calculate() {
         count++;
         if (count % 2 == 0) {
-            mInterstitialAd = new InterstitialAd(this);
-            mInterstitialAd.setAdUnitId(getString(R.string.interstitial_full_screen2));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mInterstitialAd.loadAd(adRequest);
+            interstitial = new com.facebook.ads.InterstitialAd(this, getString(R.string.facebook_interstial));
+            interstitial.setAdListener(new InterstitialAdListener() {
+                @Override
+                public void onInterstitialDisplayed(Ad ad) {
 
-            mInterstitialAd.setAdListener(new AdListener() {
-                public void onAdLoaded() {
+                }
+
+                @Override
+                public void onInterstitialDismissed(Ad ad) {
+
+                }
+
+                @Override
+                public void onError(Ad ad, AdError adError) {
+
+                }
+
+                @Override
+                public void onAdLoaded(Ad ad) {
                     showInterstitial();
                 }
+
+                @Override
+                public void onAdClicked(Ad ad) {
+
+                }
+
+                @Override
+                public void onLoggingImpression(Ad ad) {
+
+                }
             });
+            interstitial.loadAd();
         }
 
 
@@ -1243,8 +1274,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-
-
     @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
@@ -1318,29 +1347,7 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onPause() {
-        if (mAdView != null) {
-            mAdView.pause();
-        }
-        super.onPause();
-    }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (mAdView != null) {
-            mAdView.resume();
-        }
-    }
-
-    @Override
-    public void onDestroy() {
-        if (mAdView != null) {
-            mAdView.destroy();
-        }
-        super.onDestroy();
-    }
 
     public void decimal(View view) {
         calculate();
