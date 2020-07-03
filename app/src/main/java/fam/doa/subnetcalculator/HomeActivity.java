@@ -35,10 +35,9 @@ import com.facebook.ads.AdError;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
 import com.facebook.ads.InterstitialAd;
-import com.facebook.ads.InterstitialAdActivity;
+
 import com.facebook.ads.InterstitialAdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.MobileAds;
+
 
 import java.io.File;
 import java.net.InetAddress;
@@ -48,7 +47,6 @@ import java.util.Enumeration;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private final String TAG = InterstitialAdActivity.class.getSimpleName();
 
     boolean doubleBackToExitPressedOnce = false;
 
