@@ -4,17 +4,26 @@
     <string name="cidr_value"><font size="22">CIDR</font></string>
 
 
-    <!-- <string name="appID">ca-app-pub-4726525166301004~5073653508</string>
-     <string name="interstitial_full_screen2">ca-app-pub-4726525166301004/9859253932</string>
-     <string name="banner_home_footer_2">ca-app-pub-4726525166301004/2591138007</string>
 
-
-    &lt;!&ndash; <string name="appID">ca-app-pub-3940256099942544~3347511713</string>
-     <string name="interstitial_full_screen2">ca-app-pub-3940256099942544/1033173712</string>
-     <string name="banner_home_footer_2">ca-app-pub-3940256099942544/6300978111</string>
- &ndash;&gt;-->
 
     <string name="facebook_banner">429030130993372_429032230993162</string>
     <string name="facebook_interstial">429030130993372_429032944326424</string>
+
+    <string name="banner">429030130993372_429032230993162</string>
+    <string name="instafb">429030130993372_429032944326424</string>
+
+
+
+
+    <string name="appIDadmob">ca-app-pub-9789008134737820~7172211227</string>
+    <string name="instaadmob">ca-app-pub-9789008134737820/9415231188</string>
+    <string name="banneradmob">ca-app-pub-9789008134737820/6415138108</string>
+
+
+    <!-- //testadmob-->
+    <string name="instatest">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="appIDtest">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="nativeidtest">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="bannertest">ca-app-pub-3940256099942544/6300978111</string>
 
 </resources>

@@ -1,7 +1,7 @@
 package fam.doa.subnetcalculator;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
+import androidx.appcompat.app.ActionBar;
 import android.view.WindowManager;
 
 import com.daimajia.androidanimations.library.Techniques;

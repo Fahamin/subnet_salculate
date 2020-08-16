@@ -22,7 +22,7 @@
             android:background="@drawable/edit_text_design"
             android:orientation="vertical">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
@@ -96,7 +96,7 @@
 
 
                 </LinearLayout>
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
 
@@ -110,7 +110,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -232,7 +232,7 @@
                                 android:layout_weight="1"
                                 android:background="@drawable/oval"
                                 android:onClick="decimal"
-                                android:text="Deccimal"
+                                android:text="Decimal"
                                 android:textAllCaps="false"
                                 android:textColor="#ffffff"
                                 android:textSize="20sp" />
@@ -261,7 +261,7 @@
                     </LinearLayout>
 
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <LinearLayout
@@ -270,15 +270,27 @@
                     android:orientation="vertical">
 
 
-                    <LinearLayout
-                        android:id="@+id/banner_container"
+                    <com.google.android.gms.ads.AdView
+                        xmlns:ads="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/adView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
-                        android:orientation="vertical" />
+                        android:layout_centerHorizontal="true"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="@string/banneradmob">
 
 
-                    <android.support.v7.widget.CardView
+                    </com.google.android.gms.ads.AdView>
+
+                    <!--<LinearLayout
+                        android:id="@+id/banner_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />-->
+
+
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/binarycard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -472,10 +484,10 @@
                             </LinearLayout>
 
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
 
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -661,7 +673,7 @@
 
                         </LinearLayout>
 
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
 
                 </LinearLayout>

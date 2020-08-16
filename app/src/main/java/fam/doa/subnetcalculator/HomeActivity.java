@@ -1,6 +1,5 @@
 package fam.doa.subnetcalculator;
 
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,8 +10,8 @@ import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.Formatter;
@@ -29,21 +28,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.facebook.ads.AbstractAdListener;
-import com.facebook.ads.Ad;
-import com.facebook.ads.AdError;
-import com.facebook.ads.AdSize;
-import com.facebook.ads.AdView;
-import com.facebook.ads.InterstitialAd;
-
-import com.facebook.ads.InterstitialAdListener;
-
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.io.File;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Enumeration;
+
+import static fam.doa.subnetcalculator.Fun.addShow;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -108,8 +98,7 @@ public class HomeActivity extends AppCompatActivity {
     int decimal_first_part, decimal_second_part, decimal_third_part, decimal_fourth_part;
 
     int m, h, b;
-    private AdView adView;
-    private InterstitialAd interstitial;
+    private AdView mAdView;
 
 
     @Override
@@ -122,7 +111,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -253,61 +242,24 @@ public class HomeActivity extends AppCompatActivity {
         String macadress = mac.getMacAddress();
         device_mac.setText(macadress);
 
-        adView = new AdView(this, getString(R.string.facebook_banner), AdSize.BANNER_HEIGHT_50);
+   /*     adView = new AdView(this, getString(R.string.facebook_banner), AdSize.BANNER_HEIGHT_50);
         LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
         adContainer.addView(adView);
-        adView.loadAd();
-
-
+        adView.loadAd();*/
+new Fun(this);
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         bl.setVisibility(View.GONE);
+
     }
 
 
-    private void showInterstitial() {
-        if(interstitial.isAdLoaded())
-        {
-            interstitial.show();
-        }
-    }
+
 
 
     public void calculate() {
-        count++;
-        if (count % 2 == 0) {
-            interstitial = new com.facebook.ads.InterstitialAd(this, getString(R.string.facebook_interstial));
-            interstitial.setAdListener(new InterstitialAdListener() {
-                @Override
-                public void onInterstitialDisplayed(Ad ad) {
-
-                }
-
-                @Override
-                public void onInterstitialDismissed(Ad ad) {
-
-                }
-
-                @Override
-                public void onError(Ad ad, AdError adError) {
-
-                }
-
-                @Override
-                public void onAdLoaded(Ad ad) {
-                    showInterstitial();
-                }
-
-                @Override
-                public void onAdClicked(Ad ad) {
-
-                }
-
-                @Override
-                public void onLoggingImpression(Ad ad) {
-
-                }
-            });
-            interstitial.loadAd();
-        }
+        addShow();
 
 
         if (first_octate.getText().toString().isEmpty() || second_octate.getText().toString().isEmpty() ||
