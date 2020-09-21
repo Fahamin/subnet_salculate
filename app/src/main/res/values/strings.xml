@@ -1,9 +1,6 @@
 <resources>
     <string name="app_name">Subnet Calculator</string>
-
     <string name="cidr_value"><font size="22">CIDR</font></string>
-
-
 
 
 
@@ -11,11 +8,10 @@
     <string name="instafb">429030130993372_429032944326424</string>
 
 
-
-
-    <string name="appIDadmob">ca-app-pub-9789008134737820~7172211227</string>
-    <string name="instaadmob">ca-app-pub-9789008134737820/9415231188</string>
-    <string name="banneradmob">ca-app-pub-9789008134737820/6415138108</string>
+    <!--<string name="appIDadmob">ca-app-pub-6013605396446078~5089229550</string>
+    <string name="instaadmob">ca-app-pub-6013605396446078/6210739536</string>
+    <string name="nativeidadmob">ca-app-pub-9789008134737820/5223661157</string>
+    <string name="banneradmob">ca-app-pub-6013605396446078/3584576199</string>-->
 
 
     <!-- //testadmob-->

@@ -10,8 +10,6 @@ import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.Formatter;
@@ -27,9 +25,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import com.facebook.ads.AdSize;
 
 import java.io.File;
 
@@ -98,7 +97,6 @@ public class HomeActivity extends AppCompatActivity {
     int decimal_first_part, decimal_second_part, decimal_third_part, decimal_fourth_part;
 
     int m, h, b;
-    private AdView mAdView;
 
 
     @Override
@@ -242,20 +240,18 @@ public class HomeActivity extends AppCompatActivity {
         String macadress = mac.getMacAddress();
         device_mac.setText(macadress);
 
-   /*     adView = new AdView(this, getString(R.string.facebook_banner), AdSize.BANNER_HEIGHT_50);
-        LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+   /*     LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
+       adView = new AdView(HomeActivity.this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
         adContainer.addView(adView);
         adView.loadAd();*/
-new Fun(this);
-        mAdView = findViewById(R.id.adView);
+
+        new Fun(this);
+       /* mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);*/
         bl.setVisibility(View.GONE);
 
     }
-
-
-
 
 
     public void calculate() {
@@ -1296,7 +1292,6 @@ new Fun(this);
 
 
     }
-
 
 
     public void decimal(View view) {

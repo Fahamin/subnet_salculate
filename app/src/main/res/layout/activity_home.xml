@@ -48,18 +48,20 @@
                             android:layout_gravity="center"
                             android:layout_margin="0.5dp"
                             android:layout_weight="1"
-                            android:background="@drawable/round2"
+                            android:fontFamily="@font/poppins_light"
                             android:paddingLeft="5dp"
                             android:paddingBottom="5dp"
                             android:text="Your Mac Address "
-                            android:textColor="#ffffff" />
+                            android:textColor="#000" />
 
                         <TextView
                             android:id="@+id/device_mac"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="0.5dp"
+
                             android:layout_weight="2.5"
+                            android:fontFamily="@font/poppins_light"
                             android:paddingLeft="5dp"
                             android:paddingBottom="5dp"
                             android:textColor="#000" />
@@ -77,11 +79,12 @@
                             android:layout_gravity="center"
                             android:layout_margin="0.5dp"
                             android:layout_weight="1"
-                            android:background="@drawable/round2"
+                            android:fontFamily="@font/poppins_light"
                             android:paddingLeft="5dp"
+
                             android:paddingBottom="5dp"
                             android:text="Your Ip Address "
-                            android:textColor="#ffffff" />
+                            android:textColor="#000" />
 
                         <TextView
                             android:id="@+id/device_ip"
@@ -89,6 +92,8 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="0.5dp"
                             android:layout_weight="2.5"
+                            android:fontFamily="@font/poppins_light"
+
                             android:paddingLeft="5dp"
                             android:paddingBottom="5dp"
                             android:textColor="#000" />
@@ -134,6 +139,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/round2"
+                                android:fontFamily="@font/poppins_light"
+
                                 android:padding="6dp"
                                 android:text="Enter IPv4 network address"
                                 android:textColor="#ffffff"
@@ -203,7 +210,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
+                                android:fontFamily="@font/poppins_light"
                                 android:text="/"
+
                                 android:textSize="32sp" />
 
 
@@ -231,7 +240,9 @@
                                 android:layout_marginTop="1dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/oval"
+                                android:fontFamily="@font/poppins_light"
                                 android:onClick="decimal"
+
                                 android:text="Decimal"
                                 android:textAllCaps="false"
                                 android:textColor="#ffffff"
@@ -243,6 +254,8 @@
                                 android:layout_marginTop="1dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/oval"
+                                android:fontFamily="@font/poppins_light"
+
                                 android:onClick="Binary"
                                 android:text="Binary"
                                 android:textAllCaps="false"
@@ -270,24 +283,23 @@
                     android:orientation="vertical">
 
 
-                    <com.google.android.gms.ads.AdView
-                        xmlns:ads="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/adView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        ads:adSize="BANNER"
-                        ads:adUnitId="@string/banneradmob">
+                    <!-- <com.google.android.gms.ads.AdView
+                         xmlns:ads="http://schemas.android.com/apk/res-auto"
+                         android:id="@+id/adView"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentBottom="true"
+                         android:layout_centerHorizontal="true"
+                         ads:adSize="BANNER"
+                         ads:adUnitId="@string/bannertest">
 
+                     </com.google.android.gms.ads.AdView>-->
 
-                    </com.google.android.gms.ads.AdView>
-
-                    <!--<LinearLayout
+                    <LinearLayout
                         android:id="@+id/banner_container"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical" />-->
+                        android:orientation="vertical" />
 
 
                     <androidx.cardview.widget.CardView
@@ -310,8 +322,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/round2"
+                                android:fontFamily="@font/poppins_light"
                                 android:gravity="center"
                                 android:padding="8dp"
+
                                 android:text="Binary Notation Result"
                                 android:textColor="#ffffff"
                                 android:textSize="15sp" />
@@ -334,6 +348,8 @@
                                         android:layout_gravity="center"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_light"
+
                                         android:paddingLeft="5dp"
                                         android:paddingBottom="5dp"
                                         android:text="Subnet Mask"
@@ -342,10 +358,11 @@
                                     <TextView
                                         android:id="@+id/binary_subnet_TV"
                                         android:layout_width="0dp"
-
                                         android:layout_height="wrap_content"
+
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
                                         android:paddingBottom="5dp"
                                         android:textColor="#000" />
@@ -365,6 +382,7 @@
                                         android:layout_gravity="center"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_light"
 
                                         android:paddingLeft="5dp"
                                         android:paddingBottom="5dp"
@@ -377,7 +395,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
+
                                         android:paddingBottom="5dp"
                                         android:textColor="#000" />
 
@@ -397,7 +417,9 @@
                                         android:layout_gravity="center"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
+
                                         android:paddingBottom="5dp"
 
                                         android:text="Star host"
@@ -409,7 +431,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
+
                                         android:paddingBottom="5dp"
                                         android:textColor="#000" />
 
@@ -429,6 +453,7 @@
                                         android:layout_gravity="center"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
 
                                         android:paddingBottom="5dp"
@@ -441,7 +466,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
+
                                         android:paddingBottom="5dp"
                                         android:textColor="#000" />
 
@@ -461,8 +488,10 @@
                                         android:layout_gravity="center"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
                                         android:paddingBottom="5dp"
+
 
                                         android:text="Broadcast"
                                         android:textColor="#000" />
@@ -473,8 +502,10 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
                                         android:paddingBottom="5dp"
+
                                         android:textColor="#000" />
 
 
@@ -505,8 +536,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/round2"
+                                android:fontFamily="@font/poppins_light"
                                 android:gravity="center"
                                 android:padding="8dp"
+
                                 android:text="Decimal Notation Result"
                                 android:textColor="#ffffff"
                                 android:textSize="15sp" />
@@ -526,8 +559,9 @@
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
-
                                         android:layout_weight="1"
+
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
                                         android:paddingBottom="5dp"
                                         android:text="Subnet Mask"
@@ -539,7 +573,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
+
                                         android:paddingBottom="5dp"
                                         android:textColor="#000" />
 
@@ -556,8 +592,9 @@
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
-
                                         android:layout_weight="1"
+
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
                                         android:paddingBottom="5dp"
                                         android:text="Network"
@@ -569,7 +606,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
+
                                         android:paddingBottom="5dp"
                                         android:textColor="#000" />
 
@@ -587,6 +626,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
                                         android:paddingBottom="5dp"
 
@@ -599,7 +639,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
+
                                         android:paddingBottom="5dp"
                                         android:textColor="#000" />
 
@@ -618,6 +660,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
 
                                         android:paddingBottom="5dp"
@@ -630,7 +673,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
+
                                         android:paddingBottom="5dp"
                                         android:textColor="#000" />
 
@@ -649,6 +694,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="1"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
                                         android:paddingBottom="5dp"
 
@@ -661,7 +707,9 @@
                                         android:layout_height="wrap_content"
                                         android:layout_margin="0.5dp"
                                         android:layout_weight="2.5"
+                                        android:fontFamily="@font/poppins_light"
                                         android:paddingLeft="5dp"
+
                                         android:paddingBottom="5dp"
                                         android:textColor="#000" />
 

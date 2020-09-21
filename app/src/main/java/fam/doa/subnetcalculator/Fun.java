@@ -41,11 +41,11 @@ public class Fun {
         }
     }
 
-    public static void addShow() {
+   /* public static void addShow() {
         count++;
 
         mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId(context.getString(R.string.instaadmob));
+        mInterstitialAd.setAdUnitId(context.getString(R.string.instatest));
 
         //   if (count % 2 == 0) {
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
@@ -86,49 +86,52 @@ public class Fun {
                 // Code to be executed when the interstitial ad is closed.
             }
         });
-       /* } else {
+       *//* } else {
             addShowFb();
-        }*/
+        }*//*
 
-    }
+    }*/
 
-    public static void addShowFb() {
+    public static void addShow() {
+
+        count++;
+        if (count % 2 == 0) {
 
 
-        interstitial = new com.facebook.ads.InterstitialAd(context, context.getString(R.string.instafb));
-        interstitial.setAdListener(new InterstitialAdListener() {
-            @Override
-            public void onInterstitialDisplayed(Ad ad) {
+            interstitial = new com.facebook.ads.InterstitialAd(context, context.getString(R.string.instafb));
+            interstitial.setAdListener(new InterstitialAdListener() {
+                @Override
+                public void onInterstitialDisplayed(Ad ad) {
 
-            }
+                }
 
-            @Override
-            public void onInterstitialDismissed(Ad ad) {
+                @Override
+                public void onInterstitialDismissed(Ad ad) {
 
-            }
+                }
 
-            @Override
-            public void onError(Ad ad, AdError adError) {
+                @Override
+                public void onError(Ad ad, AdError adError) {
 
-            }
+                }
 
-            @Override
-            public void onAdLoaded(Ad ad) {
-                SHOWINSTADD();
-            }
+                @Override
+                public void onAdLoaded(Ad ad) {
+                    SHOWINSTADD();
+                }
 
-            @Override
-            public void onAdClicked(Ad ad) {
+                @Override
+                public void onAdClicked(Ad ad) {
 
-            }
+                }
 
-            @Override
-            public void onLoggingImpression(Ad ad) {
+                @Override
+                public void onLoggingImpression(Ad ad) {
 
-            }
-        });
-        interstitial.loadAd();
-        //}
+                }
+            });
+            interstitial.loadAd();
+        }
 
     }
 
