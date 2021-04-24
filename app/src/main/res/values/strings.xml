@@ -4,20 +4,11 @@
 
 
 
-    <string name="banner">429030130993372_429032230993162</string>
-    <string name="instafb">429030130993372_429032944326424</string>
+    <string name="facebook_app_id">776675426386144</string>
+    <string name="fb_insta_id">776675426386144_776684743051879</string>
+    <string name="fb_banner_id">776675426386144_776684503051903</string>
 
 
-    <!--<string name="appIDadmob">ca-app-pub-6013605396446078~5089229550</string>
-    <string name="instaadmob">ca-app-pub-6013605396446078/6210739536</string>
-    <string name="nativeidadmob">ca-app-pub-9789008134737820/5223661157</string>
-    <string name="banneradmob">ca-app-pub-6013605396446078/3584576199</string>-->
 
-
-    <!-- //testadmob-->
-    <string name="instatest">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="appIDtest">ca-app-pub-3940256099942544~3347511713</string>
-    <string name="nativeidtest">ca-app-pub-3940256099942544/2247696110</string>
-    <string name="bannertest">ca-app-pub-3940256099942544/6300978111</string>
 
 </resources>

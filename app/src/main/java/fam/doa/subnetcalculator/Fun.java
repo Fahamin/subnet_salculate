@@ -4,23 +4,22 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.util.Log;
 
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
+import com.facebook.ads.InterstitialAd;
 import com.facebook.ads.InterstitialAdListener;
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+
+import static android.content.ContentValues.TAG;
 
 
 public class Fun {
-
+    private static InterstitialAd interstitialAd;
 
     public static Context context;
 
-    private static com.facebook.ads.InterstitialAd interstitial;
     private static int count = 0;
-    private static InterstitialAd mInterstitialAd;
 
 
     public Fun(Context context) {
@@ -40,106 +39,61 @@ public class Fun {
 
         }
     }
-
-   /* public static void addShow() {
-        count++;
-
-        mInterstitialAd = new InterstitialAd(context);
-        mInterstitialAd.setAdUnitId(context.getString(R.string.instatest));
-
-        //   if (count % 2 == 0) {
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                } else {
-                    addShowFb();
-
-                }
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                // Code to be executed when an ad request fails.
-            }
-
-            @Override
-            public void onAdOpened() {
-                // Code to be executed when the ad is displayed.
-            }
-
-            @Override
-            public void onAdClicked() {
-                // Code to be executed when the user clicks on an ad.
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
-
-            @Override
-            public void onAdClosed() {
-                // Code to be executed when the interstitial ad is closed.
-            }
-        });
-       *//* } else {
-            addShowFb();
-        }*//*
-
-    }*/
-
-    public static void addShow() {
+    public static void addShowFb() {
 
         count++;
         if (count % 2 == 0) {
 
 
-            interstitial = new com.facebook.ads.InterstitialAd(context, context.getString(R.string.instafb));
-            interstitial.setAdListener(new InterstitialAdListener() {
+            interstitialAd = new com.facebook.ads.InterstitialAd(context, context.getString(R.string.fb_insta_id));
+            // Create listeners for the Interstitial Ad
+            InterstitialAdListener interstitialAdListener = new InterstitialAdListener() {
                 @Override
                 public void onInterstitialDisplayed(Ad ad) {
-
+                    // Interstitial ad displayed callback
+                    Log.e(TAG, "Interstitial ad displayed.");
                 }
 
                 @Override
                 public void onInterstitialDismissed(Ad ad) {
-
+                    // Interstitial dismissed callback
+                    Log.e(TAG, "Interstitial ad dismissed.");
                 }
 
                 @Override
                 public void onError(Ad ad, AdError adError) {
-
+                    // Ad error callback
+                    Log.e(TAG, "Interstitial ad failed to load: " + adError.getErrorMessage());
                 }
 
                 @Override
                 public void onAdLoaded(Ad ad) {
-                    SHOWINSTADD();
+                    // Interstitial ad is loaded and ready to be displayed
+                    Log.d(TAG, "Interstitial ad is loaded and ready to be displayed!");
+                    // Show the ad
+                    interstitialAd.show();
                 }
 
                 @Override
                 public void onAdClicked(Ad ad) {
-
+                    // Ad clicked callback
+                    Log.d(TAG, "Interstitial ad clicked!");
                 }
 
                 @Override
                 public void onLoggingImpression(Ad ad) {
-
+                    // Ad impression logged callback
+                    Log.d(TAG, "Interstitial ad impression logged!");
                 }
-            });
-            interstitial.loadAd();
+            };
+
+            // For auto play video ads, it's recommended to load the ad
+            // at least 30 seconds before it is shown
+            interstitialAd.loadAd(
+                    interstitialAd.buildLoadAdConfig()
+                            .withAdListener(interstitialAdListener)
+                            .build());
         }
-
     }
-
-    private static void SHOWINSTADD() {
-        if (interstitial.isAdLoaded()) {
-            interstitial.show();
-        }
-    }
-
 
 }

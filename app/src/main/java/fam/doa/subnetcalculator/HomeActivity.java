@@ -29,10 +29,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
+import com.facebook.ads.AudienceNetworkAds;
 
 import java.io.File;
 
-import static fam.doa.subnetcalculator.Fun.addShow;
+import static fam.doa.subnetcalculator.Fun.addShowFb;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -112,6 +114,9 @@ public class HomeActivity extends AppCompatActivity {
         androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
+
+        AudienceNetworkAds.initialize(this);
+
 
         first_octate = (EditText) findViewById(R.id.first_octate_ET);
         second_octate = (EditText) findViewById(R.id.second_octate_ET);
@@ -240,12 +245,15 @@ public class HomeActivity extends AppCompatActivity {
         String macadress = mac.getMacAddress();
         device_mac.setText(macadress);
 
-   /*     LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
-       adView = new AdView(HomeActivity.this, getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
-        adContainer.addView(adView);
-        adView.loadAd();*/
-
         new Fun(this);
+        AdView adView;
+        LinearLayout adContainer = findViewById(R.id.banner_container);
+        adView = new AdView(this, getString(R.string.fb_banner_id), AdSize.BANNER_HEIGHT_50);
+        adContainer.addView(adView);
+        adView.loadAd();
+
+
+
        /* mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);*/
@@ -255,7 +263,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
     public void calculate() {
-        addShow();
+        addShowFb();
 
 
         if (first_octate.getText().toString().isEmpty() || second_octate.getText().toString().isEmpty() ||

@@ -1,39 +1,51 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "fam.doa.subnetcalculator"
         minSdkVersion 18
-        targetSdkVersion 29
-        versionCode 13
-        versionName "9.5.9"
+        targetSdkVersion 30
+        versionCode 16
+        versionName "9.4.2"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+           // signingConfig signingConfigs.release
+
         }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //noinspection GradleCompatible
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
     //noinspection GradleCompatible
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.material:material:1.3.0'
 
     //facebook
-    implementation 'com.facebook.android:audience-network-sdk:5.10.1'
-    implementation 'com.google.android.gms:play-services-ads:19.3.0'
+    implementation 'androidx.annotation:annotation:1.2.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.+'
 
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.2'
     //noinspection GradleCompatible
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //noinspection GradleCompatible
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
